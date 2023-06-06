@@ -8,6 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/login/login.css}">
     <!--READ JS-->
     <script th:src="@{/webjars/jquery/jquery.min.js}"defer></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"defer></script>
     <title>Login</title>
 </head>
 <body class="big-light">
@@ -26,7 +27,8 @@
             </div>
             <input type="submit" value="Login" class="btn btn-primary"/>
         </form>
+        <a th:href="@{/signup}">Signup</a>
     </div>
-    
+  
 </body>
 </html>
