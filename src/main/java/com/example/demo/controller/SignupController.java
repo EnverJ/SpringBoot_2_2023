@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.util.Locale;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,9 +17,11 @@ public class SignupController {
 
   /* Display the user sign up screen */
   @GetMapping("/signup")
-  public String getSignup(Model model) {
+  public String getSignup(Model model, Locale locale) {
     //get Gender
-    Map<String, Integer> genderMap = userApplicationService.getGenderMap();
+    Map<String, Integer> genderMap = userApplicationService.getGenderMap(
+      locale
+    );
     model.addAttribute("genderMap", genderMap);
 
     //Translation to user signup screen
