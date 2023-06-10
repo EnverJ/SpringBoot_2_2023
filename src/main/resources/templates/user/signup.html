@@ -9,41 +9,41 @@
     <!--READ JS-->
     <script th:src="@{/webjars/jquery/jquery.min.js}"defer></script>
     <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"defer></script>
-    <title th:text="#{user.signup.title}"></title>
+    <title th:text="#{signup.title}"></title>
     <title></title>
 </head>
 <body class="big-light">
-    <form id="signup-form" method="post" action="/user/signup" class="form-signup">
+    <form id="signup-form" method="post" action="/user/signup" class="form-signup" th:object="${signupForm}">
      <h1 class="text-center" th:text="#{signup.title}"></h1>
             <!--User ID-->
             <div class="form-group">
                 <label for="userId" th:text="#{userId}"></label>
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" th:field="*{userId}"/>
             </div>
             <!--Password-->
             <div class="form-group">
                 <label for="password" th:text="#{password}"></label>
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" th:field="*{password}"/>
             </div>
             <!--User Name-->
             <div class="form-group">
                 <label for="userName" th:text="#{userName}"></label>
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" th:field="*{userName}"/>
             </div>
               <!--Birthday-->
               <div class="form-group">
                 <label for="birthday" th:text="#{birthday}"></label>
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" placeholder="MM/dd/yyyy" th:field="*{birthday}"/>
             </div>
               <!--Age-->
               <div class="form-group">
                 <label for="age" th:text="#{age}"></label>
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" th:field="*{age}"/>
             </div>
               <!--Gender-->
               <div class="form-group">
                <div th:each="item: ${genderMap}" class="form-check-inline">
-                <input type="radio" class="form-check-input" th:value="${item.value}"/>
+                <input type="radio" class="form-check-input" th:value="${item.value}" th:field="*{gender}"/>
                 <label class="form-check-label" th:text="${item.key}"></label>
                </div>
             </div>
