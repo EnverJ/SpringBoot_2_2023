@@ -58,7 +58,7 @@
                 <label class="form-check-label" th:text="${item.key}"></label>
                </div>
                <div class="text-danger" th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></div>
-            </div>
+            </div>       
               <!--Signup Button-->
             <input type="submit" th:value="#{signup.btn}" class="btn btn-primary w-100 mt3"/>
     
