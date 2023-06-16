@@ -13,7 +13,8 @@
     <title></title>
 </head>
 <body class="big-light">
-    <form id="signup-form" method="post" action="/user/signup" class="form-signup" th:object="${signupForm}">
+    <form id="signup-form" method="post" action="/user/signup"
+     class="form-signup" th:object="${signupForm}">
      <h1 class="text-center" th:text="#{signup.title}"></h1>
             <!--User ID-->
             <div class="form-group">
@@ -48,7 +49,8 @@
                 <label for="age" th:text="#{age}"></label>
                 <input type="text" class="form-control" th:field="*{age}"
                 th:errorclass="is-invalid"/>
-                <div class="invalid-feedback" th:errors="*{age}"></div>
+                <div class="invalid-feedback" th:errors="*{age}">
+                </div>
             </div>
               <!--Gender-->
               <div class="form-group">
