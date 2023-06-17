@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.form.GroupOrder;
 import com.example.demo.form.SignupForm;
 import java.util.Locale;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class SignupController {
   public String postSignup(
     Model model,
     Locale locale,
-    @ModelAttribute @Validated SignupForm form,
+    @ModelAttribute @Validated(GroupOrder.class) SignupForm form,
     BindingResult bindingResult
   ) {
     //input Check Result
