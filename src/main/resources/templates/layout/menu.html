@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/layout}">
+<head>
+</head>
+<body>
+    <div layout:fragment="menu" class="bg-light">
+        <ui class="nav nav-pills nav-stacked flex-column">
+            <li role="presentation">
+                <a class="nav-link" th:href="@{/user/list}">User ID</a>
+            </li>
+        </ui>
+    </div>
+</body>
+</html>
