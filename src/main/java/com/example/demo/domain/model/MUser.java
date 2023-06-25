@@ -1,4 +1,4 @@
-package com.example.demo.domain.user.model;
+package com.example.demo.domain.model;
 
 import lombok.Data;
 
@@ -9,6 +9,6 @@ public class MUser {
   private String userName;
   private Data birthday;
   private Integer age;
-  private Integer department;
+  private Integer departmentId;
   private String role;
 }

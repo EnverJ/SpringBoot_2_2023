@@ -17,4 +17,20 @@ VALUES('1', 'Eko', 0);
     ('user@co.jp','password','User1', '2000-01-01', 23,2,2, 'ROLE_GENERAL')
     ;
 
- 
+ /* Department master*/
+INSERT INTO m_department(
+    department_id,
+    department_name
+)VALUES
+(1,'System Management'),
+(2,'Sales');
+
+/* Sales Table*/
+INSERT INTO t_salary (
+user_id,
+year_month,
+salary
+)VALUES
+('user@co.jp','11/2020',2800),
+('user@co.jp','12/2020',2900),
+('user@co.jp','01/2020',3000);
