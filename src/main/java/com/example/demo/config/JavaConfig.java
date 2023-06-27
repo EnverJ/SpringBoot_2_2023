@@ -9,6 +9,6 @@ public class JavaConfig {
 
   @Bean
   public ModelMapper modelMapper() {
-    return modelMapper();
+    return new ModelMapper();
   }
 }

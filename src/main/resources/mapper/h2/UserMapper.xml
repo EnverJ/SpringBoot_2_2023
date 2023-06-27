@@ -7,14 +7,14 @@
 <!--user Registration-->
  <insert id="insertOne">
  insert into m_user(
-    user_id,
-    password,
-    user_name,
-    birthday,
-    age,
-    gender,
-    department_id,
-    role
+    user_id
+    ,password
+    ,user_name
+    ,birthday
+    ,age
+    ,gender
+    ,department_id
+    ,role
  )
  values(
     #{userId},
@@ -26,5 +26,5 @@
     #{departmentId},
     #{role}
  )
- </inser>
+ </insert>
  </mapper>
